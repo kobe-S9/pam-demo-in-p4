@@ -1,0 +1,54 @@
+table_add nrate_division calc_nrate 1 => 500000 0 32 32 32
+table_add nrate_division calc_nrate 2 => 500000 1 32 32 32
+table_add nrate_division calc_nrate 3 => 500000 2 4 6 8
+table_add nrate_division calc_nrate 4 => 500000 2 32 32 32
+table_add nrate_division calc_nrate 5 => 500000 3 4 7 8
+table_add nrate_division calc_nrate 6 => 500000 3 5 7 9
+table_add nrate_division calc_nrate 7 => 500000 3 6 9 12
+table_add nrate_division calc_nrate 8 => 500000 3 32 32 32
+table_add nrate_division calc_nrate 9 => 500000 4 5 6 10
+table_add nrate_division calc_nrate 10 => 500000 4 5 8 9
+table_add nrate_division calc_nrate 11 => 500000 4 6 7 8
+table_add nrate_division calc_nrate 12 => 500000 4 6 8 10
+table_add nrate_division calc_nrate 13 => 500000 4 7 8 9
+table_add nrate_division calc_nrate 14 => 500000 4 7 10 13
+table_add nrate_division calc_nrate 15 => 500000 4 8 12 16
+table_add nrate_division calc_nrate 16 => 500000 4 32 32 32
+table_add nrate_division calc_nrate 17 => 500000 5 6 7 8
+table_add nrate_division calc_nrate 18 => 500000 5 6 7 11
+table_add nrate_division calc_nrate 19 => 500000 5 6 8 10
+table_add nrate_division calc_nrate 20 => 500000 5 6 9 10
+table_add nrate_division calc_nrate 21 => 500000 5 6 11 12
+table_add nrate_division calc_nrate 22 => 500000 5 7 8 9
+table_add nrate_division calc_nrate 23 => 500000 5 7 8 11
+table_add nrate_division calc_nrate 24 => 500000 5 7 9 11
+table_add nrate_division calc_nrate 25 => 500000 5 7 11 12
+table_add nrate_division calc_nrate 26 => 500000 5 8 9 10
+table_add nrate_division calc_nrate 27 => 500000 5 8 10 11
+table_add nrate_division calc_nrate 28 => 500000 5 8 11 14
+table_add nrate_division calc_nrate 29 => 500000 5 9 10 12
+table_add nrate_division calc_nrate 30 => 500000 5 9 13 17
+table_add nrate_division calc_nrate 31 => 500000 5 10 15 20
+table_add nrate_division calc_nrate 32 => 500000 5 32 32 32
+
+register_write available_aggr_bw_reg 1 500000
+register_write available_aggr_bw_reg 2 500000
+register_write available_aggr_bw_reg 3 500000
+register_write available_aggr_bw_reg 4 500000
+register_write available_aggr_bw_reg 5 500000
+register_write available_aggr_bw_reg 6 500000
+register_write available_aggr_bw_reg 7 500000
+register_write available_aggr_bw_reg 8 500000
+register_write available_aggr_bw_reg 9 500000
+register_write available_aggr_bw_reg 10 500000
+
+register_write selected_flow_prio_reg 1 255
+register_write selected_flow_prio_reg 2 255
+register_write selected_flow_prio_reg 3 255
+register_write selected_flow_prio_reg 4 255
+register_write selected_flow_prio_reg 5 255
+register_write selected_flow_prio_reg 6 255
+register_write selected_flow_prio_reg 7 255
+register_write selected_flow_prio_reg 8 255
+register_write selected_flow_prio_reg 9 255
+register_write selected_flow_prio_reg 10 255

@@ -1,0 +1,52 @@
+{
+  "program": "mcast_router.p4",
+  "language": "p4-16",
+  "targets": {
+    "multiswitch": {
+      "bmv2_log": false,
+      "pcap_dump": false,
+      "auto-control-plane": true,
+      "cli": false,
+      "links": [["h1", "s1"], ["h2", "s1"], ["h3", "s1"], ["h4", "s1"], ["h5", "s1"], ["h6", "s1"]],
+      "hosts": {
+        "h1": {
+            "cmd": [
+              "./mcast_sender.py --pktnum 120 --multicast_group 224.1.2.2 --start_sleep 2.0 --policy fifo --deadline 3",
+              "./mcast_sender.py --pktnum 200 --multicast_group 224.1.2.3 --start_sleep 1.0 --policy fifo --deadline 8"
+            ],
+            "wait": true
+        },
+        "h2": {
+            "cmd": "./mcast_sender.py --pktnum 50 --multicast_group 224.1.2.4 --start_sleep 3.0 --policy fifo --deadline 5", 
+            "wait": true
+        },
+        "h3": {
+            "cmd": "./mcast_receiver.py",
+            "wait": false
+        },
+        "h4": {
+            "cmd": "./mcast_receiver.py",
+            "wait": false
+        },
+        "h5": {
+            "cmd": "./mcast_receiver.py",
+            "wait": false
+        },
+        "h6": {
+            "cmd": "./mcast_receiver.py",
+            "wait": false
+        }
+      },
+      "switches": {
+          "s1": {
+              "commands": [
+                "commands_ipv4.txt",
+                "commands_forward.txt",
+                "commands_mcast.txt"
+              ],
+              "mcast_groups": "mcast_groups.txt"
+          }
+      }
+    }
+  }
+}

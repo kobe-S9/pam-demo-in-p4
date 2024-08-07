@@ -1,0 +1,5 @@
+table_add ipv4_lpm multicast 255.255.255.255/32 => 1
+table_add ipv4_lpm multicast 224.1.2.2/32 => 2
+table_add ipv4_lpm multicast 224.1.2.3/32 => 3
+table_add ipv4_lpm multicast 224.1.2.4/32 => 4
+table_add ipv4_lpm multicast 224.1.2.5/32 => 5
